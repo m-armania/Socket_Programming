@@ -6,7 +6,7 @@ serverport = 12000
 clientsocket = socket(AF_INET, SOCK_DGRAM)
 clientsocket.settimeout(1.0)
 for seq in range(10):
-	message = 'hello os'
+	message = 'hello'
 	try:
 		start = time.time() 
 		clientsocket.sendto(message.encode(), (servername, serverport))
