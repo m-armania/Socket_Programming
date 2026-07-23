@@ -14,5 +14,3 @@ while True:
 		break
 	print ('From server:\r\n',response.decode())
 clientsocket.close()
-	
-
