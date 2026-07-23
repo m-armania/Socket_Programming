@@ -68,4 +68,3 @@ if recv7[:3] != '221':
 	print ('221 reply not received from the server')
 clientsocket.close()
 
-
