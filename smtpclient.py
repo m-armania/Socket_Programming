@@ -17,7 +17,7 @@ with open(image_path, 'rb') as f:
 	img_data = f.read()
 image = MIMEImage(img_data, name = os.path.basename(image_path))
 message.attach(image)
-msg = "I love you.\r\n"
+msg = message.as_string()
 endmsg = ".\r\n"
 mailserver = 'smtp.gmail.com'
 clientsocket = socket(AF_INET, SOCK_STREAM)
@@ -45,13 +45,11 @@ recv3 = clientsocket.recv(1024).decode()
 print (recv3)
 if recv3[:3] != '250':
 	print ('250 reply not received from the server')
-rcptcommand = 'RCPT TO: <efgh@yahoo.com>\r\n'
 clientsocket.send(b'RCPT TO: <mdarmaan99@gmail.com>\r\n')
 recv4 = clientsocket.recv(1024).decode()
 print (recv4)
 if recv4[:3] != '250':
 	print ('250 reply not received from the server')
-datacommand = 'DATA\r\n'
 clientsocket.send(b'DATA\r\n')
 recv5 = clientsocket.recv(1024).decode()
 print (recv5)
