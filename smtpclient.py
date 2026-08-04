@@ -11,7 +11,7 @@ message = MIMEMultipart()
 message['From'] = sender
 message['To'] = receiver
 message['Subject'] = 'Text and image'
-message.attach(MIMEText('I love u.\r\n', 'plain'))
+message.attach(MIMEText('love u.\r\n', 'plain'))
 image_path = os.path.expanduser('~/Downloads/images.jpeg')
 with open(image_path, 'rb') as f:
 	img_data = f.read()
