@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import time
 from socket import *
-servername = '192.168.50.238'
+servername = '192.168.00.000'
 serverport = 12000
 clientsocket = socket(AF_INET, SOCK_DGRAM)
 clientsocket.settimeout(1.0)
